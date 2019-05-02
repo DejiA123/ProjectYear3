@@ -1,13 +1,6 @@
-# Pi2Go basic motor sketch - for the first episode of my robot tutorial series.
-# In truth this program is very simple - the parts where it captures key presses is the daunting bit.
-# Try to work through it slowly and you'll soon understand!
-
-# Use the arrow keys to control the direction of the Pi2Go and use the 'greater than' and 'less than'
-# keys to edit the speed!
-
 import pi2go, time
 
-# Reading a button press from your keyboard, don't worry about this too much!
+# Reading a button press from your keyboard
 import sys
 import tty
 import termios
@@ -76,6 +69,6 @@ try:
         elif ord(keyp) == 3:
             break
 
-# When you want to exit - press ctrl+c and it will generate a keyboard interrupt - this is handled nicely here!
+# When you want to exit - press ctrl+c and it will generate a keyboard interrupt
 except KeyboardInterrupt:
     pi2go.cleanup()
